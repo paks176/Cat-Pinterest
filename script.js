@@ -39,7 +39,8 @@ class FavCat {
     // Добавить в избранные
 function addToFavourite(thisBlock) {
     for (let i = 0; i <= favPull.length; i++) {
-        if (favPull.length === 0) {
+
+        if (favPull.length === 0 || favPull[i] === undefined) {
             let newFavourite = new FavCat(thisBlock.id, thisBlock.style.backgroundImage);
             favPull.push(newFavourite);
             let thisFavourite = document.createElement('div');
@@ -52,14 +53,10 @@ function addToFavourite(thisBlock) {
             thisBlock.insertAdjacentHTML('afterbegin', addedMessage);
             let addAnimation = thisBlock.querySelector('.added__message')
             addAnimation.setAttribute('style',
-            'animation-duration: 1s !important; animation-name: appear !important')
-        } else {
-            let newFavourite = new FavCat(thisBlock.id, thisBlock.style.backgroundImage);
-            favPull.push(newFavourite);
-            let thisFavourite = document.createElement('div');
-            thisFavourite.classList.add('fav__block');
-            thisFavourite.setAttribute('style', `background-image:${thisBlock.style.backgroundImage}`)
-            favouriteContent.appendChild(thisFavourite);
+            'animation-duration: 2s !important; animation-name: appear !important')
+            setTimeout(function() {
+                addAnimation.remove()
+            } , 2000) 
             return
         }
     }
