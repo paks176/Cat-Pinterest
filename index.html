@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>Cat Pinterest</title>
+</head>
+<body>
+    <header>
+        <div class="header__flexcenter">
+            <div class="header__flexgrow">
+                <div class="header__flexcontainer">
+                    <button class="header__button active" id="all_cats">All cats</button> 
+                    <button class="header__button" id="fav_cats">Favourite cats</button> <!-- Сделать дисаблед когда нет котиков добавленных-->
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <div class="content__cats">
+            </div>
+        </div>
+        <div class="favourite">
+            <div class="content__favourite">
+
+            </div>
+            <div class="favourite__empty-message">
+                <p>Cats have not been added yet!</p>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
